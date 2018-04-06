@@ -24,9 +24,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-<<<<<<< HEAD
+
         android.widget.Toast.makeText(this, "Successfully open!", Toast.LENGTH_SHORT).show();
-=======
+
         Dexter.withActivity(MainActivity.this)
                 .withPermission(Manifest.permission.ACCESS_FINE_LOCATION)
                 .withListener(new LocationPermissionListener(this))
@@ -100,6 +100,6 @@ class LocationPermissionListener implements PermissionListener
                             token.continuePermissionRequest();
                         }
                     }).create().show();
->>>>>>> 4f5c2159798a3888bce3800509c2fbe454a456bc
+
     }
 }
