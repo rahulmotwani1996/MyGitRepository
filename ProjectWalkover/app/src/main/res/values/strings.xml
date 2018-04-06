@@ -26,4 +26,12 @@
     <string name="warning_for_name_edit">Name must not contain numbers or special characters (1&#8211;9,.,*,-,_,+,#,@..etc)</string>
 
     <string name="suggestion_heading">Have some suggestions in your mind?</string>
+
+    <string name= "need_location_permission">Location permission Required</string>
+    <string name="go_to_settings">Go to Settings</string>
+    <string name="allow_location_access">Allow location access</string>
+    <string name="why_location_is_required">For better results and filtering location is needed please allow access to
+            device location Go to Settings->Permission->enable location</string>
+
+
 </resources>
