@@ -34,4 +34,18 @@
             device location Go to Settings->Permission->enable location</string>
 
 
+    <string name= "shop_distance">%1$s miles away</string>
+    <string name="search">Search</string>
+    <string name="map_view">Map View</string>
+
+    <string name="userName">Default name</string>
+    <string name="phone">Phone</string>
+    <string name="defaultPhone">+91-58838829</string>
+    <string name="email">Email</string>
+    <string name="defaultEmail">xyzuser@xyz.com</string>
+    <string name="call_shop">Call?</string>
+    <string name="call_text">CALL</string>
+    <string name="cancel_text">CANCEL</string>
+
+
 </resources>

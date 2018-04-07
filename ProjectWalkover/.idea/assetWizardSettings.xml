@@ -14,8 +14,8 @@
                         <option name="values">
                           <map>
                             <entry key="assetSourceType" value="FILE" />
-                            <entry key="outputName" value="ic_location_permission_req" />
-                            <entry key="sourceFile" value="C:\Users\pc\Downloads\location_permission_req.svg" />
+                            <entry key="outputName" value="ic_time" />
+                            <entry key="sourceFile" value="C:\Users\pc\Downloads\time.svg" />
                           </map>
                         </option>
                       </PersistentState>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:layout_margin="6dp"
+    android:padding="8dp">
+
+
+
+        <ImageView
+            android:id="@+id/shopDisplay"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_centerVertical="true"
+            app:srcCompat="@mipmap/ic_launcher_round"
+            android:layout_alignParentLeft="true"/>
+
+
+
+
+        <TextView
+            android:id="@+id/shopName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/shopDisplay"
+            android:textColor="@color/textColor"
+            android:text="Shop Name "
+            android:textSize="28sp" />
+
+
+    <TextView
+        android:id="@+id/shop_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/shopDisplay"
+        android:layout_below="@id/shopName"
+        android:layout_marginLeft="10dp"
+        android:textSize="18sp"
+        android:textColor="@color/textColor"
+        android:text="0.6 miles away"
+        />
+
+    <RatingBar
+        android:id="@+id/ratings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:theme="@style/RatingBarTheme"
+        style="@style/Widget.AppCompat.RatingBar.Indicator"
+        android:layout_toRightOf="@id/shopDisplay"
+        android:layout_below="@id/shop_distance"
+        android:layout_marginStart="10dp"
+        android:numStars="5"
+        android:rating="3"
+        android:stepSize="0.5"
+        android:layout_marginLeft="8dp"
+        android:isIndicator="true"
+        />
+
+
+
+
+        <LinearLayout
+
+            android:id="@+id/actionLinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/ratings"
+            android:layout_toRightOf="@id/shopDisplay"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shop_action_drawable"
+
+            >
+
+            <ImageButton
+                android:id="@+id/call_shop"
+                android:layout_width="@dimen/shop_action_buttons"
+                android:layout_height="@dimen/shop_action_buttons"
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:src="@drawable/ic_phone_receiver"
+                android:layout_gravity="center_vertical"
+
+                />
+
+
+            <ImageButton
+                android:id="@+id/chat_shop"
+                android:layout_width="@dimen/shop_action_buttons"
+                android:layout_height="@dimen/shop_action_buttons"
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_chat"
+                />
+
+
+            <ImageButton
+                android:id="@+id/view_shop_profile"
+                android:layout_width="@dimen/shop_action_buttons"
+                android:layout_height="@dimen/shop_action_buttons"
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_customer_service"/>
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>
