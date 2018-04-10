@@ -27,6 +27,8 @@ import com.firebase.geofire.GeoLocation;
 import com.firebase.geofire.GeoQuery;
 import com.firebase.geofire.GeoQueryEventListener;
 import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseError;
@@ -50,14 +52,15 @@ public class NearbyShopActivity extends AppCompatActivity implements GeoQueryEve
     private Location myLocation;
     private GeoFire mGeoFire;
     private FirebaseDatabase mDatabase;
-    private static final String SHOP_LOCATION = "shop_locations";
+    private  double  radius;
+
     private Map<String,ShopModel> mShopsMap;
     private Map<String,GeoLocation> keyLocationMap;
     private CustomAdapter adapter;
     NumberFormat mFormat;
     RequestQueue mRequestQueue;
 
-
+    public  static final String SHOP_LOCATION = "shop_locations";
     public static final String BASE_URL = "url";
     public static final String SHOP_NAME = "shop_name";
     public static final String SHOP_DISPLAY_URL = "shop_photo_url";
@@ -65,6 +68,7 @@ public class NearbyShopActivity extends AppCompatActivity implements GeoQueryEve
     public static final String SHOP_ADDRESS = "shop_address";
     public static final String SHOP_TIME = "shop_time";
     public static final String SHOP_RATINGS = "shop_ratings";
+    public static final String RADIUS = "radius";
 
 
 
@@ -106,6 +110,7 @@ public class NearbyShopActivity extends AppCompatActivity implements GeoQueryEve
 
 
 
+
     }
 
 
@@ -119,11 +124,17 @@ public class NearbyShopActivity extends AppCompatActivity implements GeoQueryEve
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
+
+
         switch (item.getItemId())
         {
             case R.id.search_option: //start search activity
                         break;
             case R.id.map_view_option : //start map activity
+                        keyLocationMap.put("Current location",new GeoLocation(myLocation.getLatitude(),myLocation.getLongitude()));
+                        Intent mapIntent = new Intent(this,MapsActivity.class);
+                        mapIntent.putExtra(RADIUS,radius);
+                        startActivity(mapIntent);
                         break;
 
 
